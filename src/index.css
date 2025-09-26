@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Lexend", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --primary: 255 255 255; /* White */
+  --primaryDark: 166 166 166; /* Darker grey */
+  --primaryLight: 218 218 218; /* Lighter grey */
+  --secondary: 0 0 0; /* Black */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+  color: rgb(var(--primary));
+  background-color: rgb(
+    var(--primaryLight)
+  ); /* Apply the primary color to all text */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@theme {
+  --font-display: "Lexend", "sans-serif";
+  --font-heading: "Lexend Giga", sans-serif;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/fonts/Lexend-ExtraLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/fonts/Lexend-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("./assets/fonts/Lexend-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Giga";
+  src: url("./assets/fonts/LexendGiga-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend Giga";
+  src: url("./assets/fonts/LexendGiga-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-floating {
+  animation: float 5s ease-in-out infinite;
+}
+
+.button-shimmer {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  transition: background-position 0.8s;
+}
+@keyframes bgZoom {
+  0%,
+  100% {
+    background-size: 100% auto;
+  }
+  50% {
+    background-size: 101% auto;
+  }
+}
+.hero-bg {
+  animation: bgZoom 20s ease-in-out infinite;
+}
+
+.mirrorEffect {
+  transform: scaleY(-1);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
