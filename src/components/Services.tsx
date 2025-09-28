@@ -4,7 +4,7 @@ import "../swiperCube.css";
 import "../swiperPagination.css";
 
 import styles from "../style";
-import { projectsShowcase, servicesShowcase } from "../constants";
+import { servicesShowcase } from "../constants";
 import { Navigation, Autoplay, EffectCube } from "swiper/modules";
 import { useEffect, useState } from "react";
 import H2Section from "./decor/H2Section";
