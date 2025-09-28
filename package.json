@@ -1,7 +1,6 @@
 {
   "name": "sww",
-  "homepage": "https://adammKass.github.io/VFXSTUDIO",
-  "private": true,
+  "homepage": "https://adammKass.github.io/VFXSTUDIO/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -16,7 +16,7 @@ export default defineConfig({
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
           react(),
         ],
-        base: `./VFXSTUDIO/`,
+        base: `/VFXSTUDIO`,
         test: {
           name: "storybook",
           browser: {
