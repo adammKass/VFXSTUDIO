@@ -88,6 +88,7 @@ const Showcase = () => {
       <Swiper
         effect={"cube"}
         grabCursor={true}
+        lazyPreloadPrevNext={1}
         cubeEffect={{
           shadow: true,
           slideShadows: true,
@@ -109,8 +110,10 @@ const Showcase = () => {
             <div className="flex flex-col gap-4 text-gray-800 items-center justify-center text-center my-4 px-0 lg:px-4">
               <video
                 src={project.video}
+                poster={project.image}
                 autoPlay
                 loop
+                aria-label={project.aria}
                 className="w-full rounded-sm shadow-lg"
               ></video>
             </div>

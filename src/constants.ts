@@ -68,6 +68,7 @@ export const projectsShowcase = [
     video: v_apoc,
     href: "#apocalypse",
     text: "A breathtaking 3D environment showcasing a detailed apocalypse landscape with realistic textures and lighting.",
+    aria: "A video showcasing a detailed apocalypse landscape with realistic textures and lighting.",
   },
   {
     id: "2",
@@ -78,6 +79,7 @@ export const projectsShowcase = [
     video: v_cafe,
     href: "#cafe-interior",
     text: "A breathtaking 3D environment showcasing a detailed cafe interior with realistic textures and lighting.",
+    aria: "A video showcasing a detailed cafe interior with realistic textures and lighting.",
   },
   {
     id: "3",
@@ -88,6 +90,7 @@ export const projectsShowcase = [
     video: v_scifi,
     href: "#sci-fi-corridor",
     text: "A breathtaking 3D environment showcasing a detailed sci-fi corridor with realistic textures and lighting.",
+    aria: "A video showcasing a detailed sci-fi corridor with realistic textures and lighting.",
   },
 ];
 
@@ -99,6 +102,7 @@ export const servicesShowcase = [
     video: v_model,
     href: "#3d-modeling",
     text: "Creating high quality 3D models for various applications. From blockout art to final assets, we cover all aspects of 3D modeling.",
+    aria: "A video showcasing high quality 3D models for various applications.",
   },
   {
     id: "2",
@@ -107,6 +111,7 @@ export const servicesShowcase = [
     video: v_vfx,
     href: "#vfx",
     text: "Creating high quality visual effects for various applications. We specialize in both 2D and 3D effects.",
+    aria: "A video showcasing high quality visual effects for various applications.",
   },
   {
     id: "3",
@@ -115,6 +120,7 @@ export const servicesShowcase = [
     video: v_apoc,
     href: "#cinematic",
     text: "Creating high quality cinematic experiences for various applications. We specialize in both 2D and 3D cinematics.",
+    aria: "A video showcasing high quality cinematic experiences for various applications.",
   },
 ];
 

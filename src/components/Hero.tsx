@@ -10,46 +10,12 @@ import {
 import { svg_Close, svg_Logo_Black, svg_Menu } from "../assets";
 import { navLinks } from "../constants";
 import styles from "../style";
-import { useEffect, useState, forwardRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { Mesh } from "three";
-import GlassShard from "./3d/GlassShard";
-import GlassWall from "./3d/GlassWall";
+
 import DriftingLight from "./3d/DriftingLight";
-
-// FloatingShard props
-interface FloatingShardProps {
-  position: [number, number, number];
-  index: number;
-  rotation: [number, number, number];
-  scale: [number, number, number];
-}
-
-interface ShardRef extends Mesh {}
-
-const FloatingShard = forwardRef<ShardRef, FloatingShardProps>(
-  ({ position, rotation, scale }, ref) => {
-    // Each shard just slowly animates (no hover or click)
-    useFrame(() => {
-      if (ref && typeof ref !== "function" && ref.current) {
-        ref.current.rotation.y += 0.001;
-      }
-    });
-
-    return (
-      <GlassShard
-        ref={ref}
-        position={position}
-        rotation={rotation}
-        scale={scale}
-        renderOrder={1}
-      />
-    );
-  }
-);
-
-FloatingShard.displayName = "FloatingShard";
+import GlassWall from "./3d/GlassWall";
 
 const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -76,20 +42,7 @@ const Hero = () => {
         className={`absolute top-0`}
       >
         <Canvas camera={{ position: [0, 2, 10], fov: 55 }}>
-          <ambientLight intensity={0.1} />
-          <pointLight position={[5, 10, -5]} intensity={200} />
           <DriftingLight /> {/* 🌌 smooth drifting light */}
-          {/* <pointLight position={[-10, 10, -10]} intensity={0.5} /> */}
-          {/* Dense Glass Wall */}
-          {/* {shardPositions.map((pos, index) => (
-            <FloatingShard
-              key={index}
-              position={pos}
-              index={index}
-              rotation={shardRotations[index]}
-              scale={shardScales[index]}
-            />
-          ))} */}
           <GlassWall position={[0, 0, 8]} rotation={[0, 0, 0]} />
           <Environment preset="studio" />
           <OrbitControls

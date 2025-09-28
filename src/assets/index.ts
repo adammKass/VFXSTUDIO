@@ -30,7 +30,6 @@ import jpg_Cafe from "./jpgs/jpg_Cafe.jpg";
 import jpg_VFX from "./jpgs/jpg_VFX.jpg";
 import jpg_Model from "./jpgs/jpg_Model.jpg";
 import jpg_SciFI from "./jpgs/jpg_SciFI.jpg";
-import v_Hero from "./videos/v_Hero.webm";
 import v_vfx from "./videos/v_vfx.webm";
 import v_model from "./videos/v_model.webm";
 import v_apoc from "./videos/v_apoc.webm";
@@ -46,7 +45,6 @@ export {
   jpg_VFX,
   jpg_Model,
   jpg_SciFI,
-  v_Hero,
   v_vfx,
   v_model,
   v_apoc,

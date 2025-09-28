@@ -36,6 +36,7 @@ const Services = () => {
           effect={"cube"}
           grabCursor={true}
           loop={true}
+          lazyPreloadPrevNext={1}
           cubeEffect={{
             shadow: true,
             slideShadows: true,
@@ -68,6 +69,8 @@ const Services = () => {
               <div className={`w-full ${styles.mirrorSwiper}`}>
                 <video
                   src={service.video}
+                  poster={service.image}
+                  aria-label={service.aria}
                   autoPlay
                   loop
                   className="w-full h-full object-cover rounded-sm mirrorEffect"
