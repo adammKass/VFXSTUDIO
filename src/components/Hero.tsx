@@ -66,9 +66,6 @@ const Hero = () => {
     setTimeout(() => setLightButton(true), 1800);
   }, []);
 
-  // Bigger, denser shard wall
-  const shardCount = 220;
-
   return (
     <main
       className={`relative w-screen h-screen flex flex-col bg-gradient-to-t from-gray-400/80 via-gray-300/50 to-gray-500/80 snap-start hero-bg`}
