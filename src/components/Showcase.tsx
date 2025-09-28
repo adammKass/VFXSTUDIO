@@ -4,23 +4,17 @@ import "../swiper1.css";
 import { useState, useEffect } from "react";
 import { projectsInfo, projectsShowcase } from "../constants";
 import styles from "../style";
-import {
-  Autoplay,
-  Navigation,
-  EffectCoverflow,
-  EffectCube,
-} from "swiper/modules";
+import { Autoplay, Navigation, EffectCube } from "swiper/modules";
 
 const Showcase = () => {
   const [showHeading, setShowHeading] = useState(false);
   const [showStatistics, setShowStatistics] = useState(false);
   const [showShowcase, setShowShowcase] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
+
   useEffect(() => {
     setTimeout(() => setShowHeading(true), 200); // slight delay for effect
     setTimeout(() => setShowStatistics(true), 700); // show statistics after 4s
     setTimeout(() => setShowShowcase(true), 2000); // show showcase after 6s
-    setTimeout(() => setShowProjects(true), 3000); // show projects after 8s
   }, []);
 
   // Only show 3 images: left, center, right

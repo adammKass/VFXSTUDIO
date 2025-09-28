@@ -68,31 +68,6 @@ const Hero = () => {
 
   // Bigger, denser shard wall
   const shardCount = 220;
-  const shardPositions: [number, number, number][] = Array.from(
-    { length: shardCount },
-    () => [
-      (Math.random() - 0.5) * 30, // wider spread
-      (Math.random() - 0.5) * 20, // taller spread
-      -6, // behind floor
-    ]
-  );
-
-  const shardRotations: [number, number, number][] = Array.from(
-    { length: shardCount },
-    () => [
-      Math.random() * Math.PI,
-      Math.random() * Math.PI,
-      Math.random() * Math.PI,
-    ]
-  );
-
-  const shardScales: [number, number, number][] = Array.from(
-    { length: shardCount },
-    () => {
-      const base = 1 + Math.random() * 2.5;
-      return [base * 0.8, base * 1.2, base * 0.6];
-    }
-  );
 
   return (
     <main

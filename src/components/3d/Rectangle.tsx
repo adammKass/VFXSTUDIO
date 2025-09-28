@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { useRef, type JSX } from "react";
-import { useFrame } from "@react-three/fiber";
 
 function Rectangle(props: JSX.IntrinsicElements["mesh"]) {
   const mesh = useRef<THREE.Mesh>(null!);

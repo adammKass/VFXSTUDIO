@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  svg_Email,
-  svg_Email_Black,
-  svg_Logo,
-  svg_Logo_Black,
-  svg_Phone,
-  svg_Phone_Black,
-} from "../assets";
+import { svg_Email_Black, svg_Logo_Black, svg_Phone_Black } from "../assets";
 import { socials } from "../constants";
 import styles from "../style";
 

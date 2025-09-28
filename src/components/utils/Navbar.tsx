@@ -1,5 +1,5 @@
 import { Tab, TabGroup, TabList } from "@headlessui/react";
-import React, { Component } from "react";
+
 import { navLinks } from "../../constants";
 import { svg_Logo } from "../../assets";
 import styles from "../../style";
