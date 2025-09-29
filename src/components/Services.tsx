@@ -8,7 +8,7 @@ import { servicesShowcase } from "../constants";
 import { Navigation, Autoplay, EffectCube } from "swiper/modules";
 import { useMemo } from "react";
 import H2Section from "./decor/H2Section";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import useIsMobile from "./utils/useMobile";
 import { fadeInVariants } from "./utils/animationsMotion";
 

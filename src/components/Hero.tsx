@@ -10,9 +10,9 @@ import {
 import { svg_Close, svg_Logo_Black, svg_Menu } from "../assets";
 import { navLinks } from "../constants";
 import styles from "../style";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { useState } from "react";
 // import HeroCanvas from "./decor/HeroCanvas";
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroCanvas from "./decor/HeroCanvas";
 import { containerVariants, fadeInVariants } from "./utils/animationsMotion";
 

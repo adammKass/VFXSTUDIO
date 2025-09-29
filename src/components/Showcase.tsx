@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "../swiper1.css";
-import { useState, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { projectsInfo, projectsShowcase } from "../constants";
 import styles from "../style";
 import { Autoplay, Navigation, EffectCube } from "swiper/modules";
