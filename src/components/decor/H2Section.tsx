@@ -1,20 +1,15 @@
 import styles from "../../style";
 
 type H2SectionProps = {
-  showHeading: boolean;
   heading: string;
 };
 
-const H2Section = ({ showHeading, heading }: H2SectionProps) => {
+const H2Section = ({ heading }: H2SectionProps) => {
   return (
     <div className={`${styles.textCenter} flex flex-col`}>
       <h2
         className={`
-          text-4xl uppercase transition-all duration-700 ${
-            showHeading
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-8"
-          }
+          text-4xl uppercase transition-all duration-700 
         `}
       >
         {heading}
@@ -23,9 +18,7 @@ const H2Section = ({ showHeading, heading }: H2SectionProps) => {
       {/* Mirror reflection */}
       <h2
         className={`
-          text-4xl uppercase pointer-events-none select-none opacity-40 transition-all duration-700 ${
-            showHeading ? "translate-x-0" : "-translate-x-8"
-          }
+          text-4xl uppercase pointer-events-none select-none opacity-40 transition-all duration-700 
         `}
         style={{
           transform: "scaleY(-1)",
