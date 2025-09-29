@@ -15,13 +15,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import HeroCanvas from "./decor/HeroCanvas";
 import { containerVariants, fadeInVariants } from "./utils/animationsMotion";
+import useIsMobile from "./utils/useMobile";
 
 const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const isMobile = useIsMobile(768); // <768px = mobile
   // const HeroCanvas = lazy(() => import("./decor/HeroCanvas"));
   return (
     <main
-      className={`relative w-screen h-screen flex flex-col bg-gradient-to-t from-gray-400/80 via-gray-300/50 to-gray-500/80 snap-start hero-bg`}
+      className={`relative w-screen h-screen flex flex-col bg-[url('/src/assets/jpgs/heroBanner.png')] bg-cover md:bg-gray-400  snap-start hero-bg`}
       id="home"
     >
       {/* <Suspense
@@ -29,7 +31,7 @@ const Hero = () => {
           <div className="w-full h-full absolute top-0 left-0 bg-gray-900" />
         }
       > */}
-      <HeroCanvas />
+      {!isMobile && <HeroCanvas />}
       {/* </Suspense> */}
 
       <header
